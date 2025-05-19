@@ -1,2 +1,5 @@
 # apt.txt
 wget
+tar
+libgdal-dev
+libxerces-c-dev
