@@ -4,7 +4,6 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9
-  - sumo-bin=1.18.0=hd8ed1ab_0  # 使用 Conda-forge 的完整版本号
   - pandas
   - numpy
   - lxml
