@@ -1,6 +1,5 @@
 #!/bin/bash
 # postBuild
 apt-get update -qq
-apt-get install -y --no-install-recommends sumo-tools
-echo "export SUMO_HOME=/opt/conda/share/sumo" >> ~/.bashrc
-source ~/.bashrc
+apt-get install -y sumo sumo-tools
+echo "export SUMO_HOME=/usr/share/sumo" >> ~/.bashrc
