@@ -1,20 +1,6 @@
 #!/bin/bash
 # postBuild
-
-# 进入用户主目录
-cd /home/jovyan
-
-# 下载源码包（确认链接有效）
-wget https://sumo.dlr.de/releases/1.18.0/sumo-src-1.18.0.tar.gz
-tar -xzf sumo-src-1.18.0.tar.gz
-cd sumo-1.18.0
-
-# 编译安装
-mkdir build && cd build
-cmake ..
-make -j$(nproc)
-
-# 设置用户级环境变量（无需 root）
-echo "export SUMO_HOME=/home/jovyan/sumo-1.18.0" >> ~/.bashrc
-echo "export PATH=\$PATH:/home/jovyan/sumo-1.18.0/bin" >> ~/.bashrc
+# 仅设置环境变量，不再执行 apt-get
+echo "export SUMO_HOME=/usr/share/sumo" >> ~/.bashrc
+echo "export PATH=\$PATH:/usr/games" >> ~/.bashrc
 source ~/.bashrc
