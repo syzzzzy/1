@@ -1,9 +1,9 @@
+# environment.yml
 name: sumo-binder
 channels:
   - conda-forge
 dependencies:
   - python=3.9
-  - sumo-bin=1.18.0  # 使用正确的包名
   - pandas
   - numpy
   - lxml
