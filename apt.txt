@@ -1,3 +1,10 @@
 # apt.txt
-sumo
-sumo-tools
+wget
+cmake
+g++
+libxerces-c-dev
+libfox-1.6-dev
+libgdal-dev
+libproj-dev
+libgl2ps-dev
+swig
