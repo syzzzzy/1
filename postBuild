@@ -1,7 +1,14 @@
 #!/bin/bash
 # postBuild
+
+# 安装 SUMO 核心和工具包
 apt-get update -qq
 apt-get install -y sumo sumo-tools
+
+# 设置环境变量（关键！）
 echo "export SUMO_HOME=/usr/share/sumo" >> ~/.bashrc
-echo "export PATH=$PATH:/usr/games" >> ~/.bashrc  # SUMO 默认安装到 /usr/games
+echo "export PATH=\$PATH:/usr/games" >> ~/.bashrc  # SUMO 可执行文件路径
 source ~/.bashrc
+
+# 验证安装
+sumo --version
