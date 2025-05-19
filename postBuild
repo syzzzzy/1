@@ -3,3 +3,5 @@
 apt-get update -qq
 apt-get install -y sumo sumo-tools
 echo "export SUMO_HOME=/usr/share/sumo" >> ~/.bashrc
+echo "export PATH=$PATH:/usr/games" >> ~/.bashrc  # SUMO 默认安装到 /usr/games
+source ~/.bashrc
