@@ -1,5 +1,10 @@
 # apt.txt
 wget
-tar
-libgdal-dev
+cmake
+g++
 libxerces-c-dev
+libfox-1.6-dev
+libgdal-dev
+libproj-dev
+libgl2ps-dev
+swig
