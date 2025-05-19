@@ -1,19 +1,20 @@
 #!/bin/bash
 # postBuild
 
-# 进入用户主目录（绝对路径）
+# 进入用户主目录
 cd /home/jovyan
 
-# 下载预编译的 SUMO 1.18.0（确保链接有效）
-wget https://sumo.dlr.de/releases/1.18.0/sumo-1.18.0-Linux64.tar.gz
-tar -xzf sumo-1.18.0-Linux64.tar.gz
+# 下载源码包（确认链接有效）
+wget https://sumo.dlr.de/releases/1.18.0/sumo-src-1.18.0.tar.gz
+tar -xzf sumo-src-1.18.0.tar.gz
+cd sumo-1.18.0
 
-# 设置用户级环境变量
+# 编译安装
+mkdir build && cd build
+cmake ..
+make -j$(nproc)
+
+# 设置用户级环境变量（无需 root）
 echo "export SUMO_HOME=/home/jovyan/sumo-1.18.0" >> ~/.bashrc
 echo "export PATH=\$PATH:/home/jovyan/sumo-1.18.0/bin" >> ~/.bashrc
-
-# 立即生效
 source ~/.bashrc
-
-# 添加执行权限（可选）
-chmod +x /home/jovyan/sumo-1.18.0/bin/*
