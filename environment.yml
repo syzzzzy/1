@@ -1,0 +1,8 @@
+name: sumo-binder
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - sumo=1.18.0
+  - pandas
+  - numpy
