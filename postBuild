@@ -1,0 +1,4 @@
+#!/bin/bash
+# 安装 SUMO 工具包（用于 netgenerate、netedit 等）
+sudo apt-get update
+sudo apt-get install -y sumo-tools
